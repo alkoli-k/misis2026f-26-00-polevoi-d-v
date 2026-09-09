@@ -43,6 +43,7 @@
 build/
 Build/
 build-*/
+bin.*/
 
 # CMake generated files
 CMakeFiles/
@@ -57,6 +58,7 @@ compile_commands.json
 *.log
 *.bak
 *.swp
+*.draft
 
 # vcpkg
 vcpkg_installed/
