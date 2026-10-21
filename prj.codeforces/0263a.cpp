@@ -1,17 +1,11 @@
-// 2022 by Polevoy Dmitry under Free Public License 1.0.0
-// source https://codeforces.com/problemset/problem/263/A
-//
-
 #include <iostream>
- 
-int main() { 
-  int i = 0;
-  int v = 0;
-  for (; 0 == v; i += 1) {
-    std::cin >> v;
-  }
-  i -= 1;
-  int x = i % 5;
-  int y = i / 5;
-  std::cout << std::abs(x - 2) + std::abs(y - 2);
+#include <cstdlib>
+int main() {
+    int answer = 0;
+    for (int i = 0; i < 25; ++i) {
+        int value;
+        if (!(std::cin >> value)) return 0;
+        if (value == 1) answer = std::abs(2 - i / 5) + std::abs(2 - i % 5);
+    }
+    std::cout << answer << '\n';
 }
